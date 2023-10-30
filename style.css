@@ -1,0 +1,178 @@
+:root {
+  --azul: #387E96;
+  --preto: #202024;
+  font-family: 'Mulish', sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.app {
+  display: grid;
+  grid-template-areas: 
+    "header" "header"
+    "main"  "main"
+    "aside" "aside"
+    "footer" "footer";
+    place-content: center;
+}
+
+
+.header-itens {
+  padding: 1.2rem 2.8rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  background-color: var(--azul);
+  width: 100vw;
+  justify-content: center;
+}
+
+
+.paw {
+  background-color: #FFF;
+  width: 4.0rem;
+  height: 4.0rem;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.header-itens form input {
+  border: 0;
+  font-family: 'Mulish', sans-serif;
+  border-radius: .4rem;
+  background: rgba(255, 255, 255, 0.20);
+  padding: 0 1.4rem;
+  width: 50vw;
+  height: 4rem;
+  color: #FFF;
+  font-weight: 600;
+}
+
+.header-itens form label {
+  display: none;
+}
+
+.main-itens h1 {
+  color: var(--preto);
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+  margin: 2.1rem 6.6rem 2.8rem 2.2rem;
+}
+
+.main-itens img {
+  width: 100vw;
+  height: 22.0rem;
+}
+
+.main-itens p {
+  color: var(--preto);
+  font-family: Mulish;
+  line-height: 2.5rem;
+  margin: 2.1rem 6.6rem 2.8rem 2.2rem;
+}
+
+h2 {
+  margin-left: 2.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.aside-itens {
+  margin-left: 2.2rem;
+  margin-bottom: 2.2rem;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.aside-itens img {
+  height: 8rem;
+}
+
+.footer-itens {
+  text-align: center;
+  background-color: var(--azul);
+  padding: 1.6rem;
+}
+
+.footer-itens a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+
+@media (min-width: 1000px) {
+  main, aside, body {
+    background:  #F4FCFF;
+  }  
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-itens {
+   padding: 4.4rem 3.4rem 10.3rem 11.2rem;
+  }
+  
+  .main-itens p {
+    width: 80rem;
+    margin: 0;
+  }
+
+  .main-itens img {
+    height: 40.5rem;
+    width: 80rem;
+    border-radius: 8px;
+  }
+
+  .responsive {
+    display: flex;
+    justify-content: center;
+  }
+
+  aside h2 {
+    margin-top: 4.4rem;
+    margin-bottom: 0;
+  }
+
+  .aside-itens {
+    min-width: 21.5rem;
+    margin: 0;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .aside-itens p {
+    width: 21.5rem;
+    font-size: 1.4rem;
+    margin-top: .4rem;
+  }
+
+  .aside-itens img {
+    margin: 0;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+}
+
+img {
+  animation: move .7s;
+}
+
+img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
